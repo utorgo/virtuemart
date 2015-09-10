@@ -272,7 +272,9 @@ class VirtuemartViewCategory extends VmView {
 
 	    // Set the titles
 		if (!empty($category->customtitle)) {
-        	$title = strip_tags($category->customtitle);
+        	//My $title = strip_tags($category->customtitle);
+			$title = strip_tags($category->category_name . ' ' . $category->customtitle);
+			//My
      	} elseif (!empty($category->category_name)) {
      		$title = strip_tags($category->category_name);
 		} else {
