@@ -179,7 +179,7 @@ if (empty($this->product)) {
 				<div class="product-price" id="productPrice<?php echo $this->product->virtuemart_product_id ?>">
 					<?php
 				if (!empty($this->product->prices)) {
-						My echo "<strong>" . JText::_ ('COM_VIRTUEMART_CART_PRICE') . "</strong>";
+						echo "<strong>" . JText::_ ('COM_VIRTUEMART_CART_PRICE') . "</strong>";
 					}
 					//vmdebug('view productdetails layout default show prices, prices',$this->product);
 					if (empty($this->product->prices['salesPrice']) and VmConfig::get ('askprice', 1) and isset($this->product->images[0]) and !$this->product->images[0]->file_is_downloadable) {
