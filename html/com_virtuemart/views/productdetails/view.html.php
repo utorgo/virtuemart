@@ -232,7 +232,9 @@ class VirtueMartViewProductdetails extends VmView {
 			// Set the titles
 			// $document->setTitle should be after the additem pathway
 			if ($product->customtitle) {
-				$document->setTitle(strip_tags(html_entity_decode($product->customtitle,ENT_QUOTES)));
+				//My $document->setTitle(strip_tags(html_entity_decode($product->customtitle,ENT_QUOTES)));
+				$document->setTitle(strip_tags(html_entity_decode(($category->category_name ? (vmText::_($category->category_name) . ' : ') : '') . $product->product_name. ' : ' . $product->customtitle,ENT_QUOTES)));
+				//My
 			} else {
 				$document->setTitle(strip_tags(html_entity_decode(($category->category_name ? (vmText::_($category->category_name) . ' : ') : '') . $product->product_name,ENT_QUOTES)));
 			}
